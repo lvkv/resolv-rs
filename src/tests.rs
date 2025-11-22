@@ -31,12 +31,12 @@ fn basic_test_query() {
 }
 
 // This DNS domain no longer responds. FIXME.
-// #[test]
+#[test]
 fn test_tlsa() {
     let mut resolver = Resolver::new().unwrap();
     let mut response = resolver
         .query(
-            b"_443._tcp.www.middlebox-dane.org",
+            b"_443._tcp.fedoraproject.org",
             Class::IN,
             RecordType::TLSA,
         )
